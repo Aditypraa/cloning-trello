@@ -1,7 +1,7 @@
 const { Todo, Item } = require("../../db/models");
 
 module.exports = {
-  getAll: async (req, res) => {
+  getAll: async (req, res, next) => {
     try {
       const result = await Todo.findAll({
         attributes: ["id", "name"],
@@ -15,12 +15,12 @@ module.exports = {
         message: "Success",
         data: result,
       });
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      next(err);
     }
   },
 
-  create: async (req, res) => {
+  create: async (req, res, next) => {
     try {
       const { name } = req.body;
       const result = await Todo.create({
@@ -30,12 +30,12 @@ module.exports = {
         message: "Success",
         data: result,
       });
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      next(err);
     }
   },
 
-  getOne: async (req, res) => {
+  getOne: async (req, res, next) => {
     try {
       const { id } = req.params;
       const result = await Todo.findOne({
@@ -45,12 +45,12 @@ module.exports = {
         message: "Success",
         data: result,
       });
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      next(err);
     }
   },
 
-  update: (req, res) => {
+  update: (req, res, next) => {
     const { id } = req.params;
     const { name } = req.body;
 
@@ -64,11 +64,11 @@ module.exports = {
         });
       })
       .catch((err) => {
-        console.log(err);
+        next(err);
       });
   },
 
-  destroy: (req, res) => {
+  destroy: (req, res, next) => {
     const { id } = req.params;
 
     Todo.findOne({ where: { id } })
@@ -81,7 +81,7 @@ module.exports = {
         });
       })
       .catch((err) => {
-        console.log(err);
+        next(err);
       });
   },
 };
