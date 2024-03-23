@@ -8,6 +8,7 @@ const URL = "/api/v1";
 
 // Import Routes
 const todosRoutes = require("./app/api/todos/todos.routes");
+const itemsRoutes = require("./app/api/item/item.routes");
 // End Routes
 
 app.use(logger("dev"));
@@ -25,6 +26,7 @@ app.get("/", function (req, res) {
 });
 
 app.use(`${URL}`, todosRoutes);
+app.use(`${URL}`, itemsRoutes);
 // End Endpoint API
 
 // Handle Error
