@@ -25,11 +25,13 @@
 ## 🛠️ Tech Stack
 
 ### Backend
+
 ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=sequelize&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### Frontend
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
@@ -42,6 +44,7 @@
 ## 🚀 Quick Start
 
 1️⃣ **Clone repository & install dependencies**
+
 ```bash
 # Clone the repo
 git clone https://github.com/Aditypraa/cloning-trello.git
@@ -56,6 +59,7 @@ npm install
 ```
 
 2️⃣ **Setup environment**
+
 ```bash
 # jika belum ada!, Di folder backend, copy .env.example
 cp .env.example .env
@@ -69,12 +73,14 @@ PORT=3306
 ```
 
 3️⃣ **Run migrations**
+
 ```bash
 cd backend
 npx sequelize-cli db:migrate
 ```
 
 4️⃣ **Start development server**
+
 ```bash
 # Terminal 1 - Backend
 cd backend
@@ -86,6 +92,7 @@ npm start
 ```
 
 🎉 Aplikasi akan berjalan di:
+
 - Frontend: `http://localhost:3000`
 - Backend: `http://localhost:5000`
 
@@ -114,23 +121,24 @@ cloning-trello/
 ## 🔗 API Reference
 
 ### 🎯 Items
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| POST | `/api/v1/items` |  |
-| GET | `/api/v1/items/:id` |  |
-| PUT | `/api/v1/items/:id` |  |
-| PUT | `/api/v1/items/:id/move` |  |
-| DELETE | `/api/v1/items/:id` |  |
+
+| Method | Endpoint                 | Deskripsi |
+| ------ | ------------------------ | --------- |
+| POST   | `/api/v1/items`          |           |
+| GET    | `/api/v1/items/:id`      |           |
+| PUT    | `/api/v1/items/:id`      |           |
+| PUT    | `/api/v1/items/:id/move` |           |
+| DELETE | `/api/v1/items/:id`      |           |
 
 ### 📋 Todos
-| Method | Endpoint | Deskripsi |
-|--------|----------|-----------|
-| GET | `/api/v1/todos` |  |
-| POST | `/api/v1/todos` |  |
-| GET | `/api/v1/todos/:id` |  |
-| PUT | `/api/v1/todos/:id` |  |
-| DELETE | `/api/v1/todos/:id` |  |
 
+| Method | Endpoint            | Deskripsi |
+| ------ | ------------------- | --------- |
+| GET    | `/api/v1/todos`     |           |
+| POST   | `/api/v1/todos`     |           |
+| GET    | `/api/v1/todos/:id` |           |
+| PUT    | `/api/v1/todos/:id` |           |
+| DELETE | `/api/v1/todos/:id` |           |
 
 ## 🤝 Contributing
 
@@ -174,8 +182,14 @@ Distributed under the MIT License. Lihat `LICENSE` untuk informasi lebih lanjut.
 - [MySQL](https://www.mysql.com)
 
 ---
+
 <div align="center">
 Made with ❤️ by Aditya Pratama
 
 ⭐️ Star repo ini jika membantu!
+
 </div>
+
+# Link Referensi Belajar
+
+https://www.youtube.com/watch?v=ZDa4lk1DlI0&t=1922s
